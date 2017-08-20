@@ -1,24 +1,19 @@
 body {
+  font-family: Verdana, sans-serif;
   background-color: black;
   text-align: center;
+  color: white;
 }
 
 h1 {
-  font-family: Verdana;
-  font-weight: normal;
   font-size: 50px;
-  color: white;
-  text-align: center;
 }
 
-h2, h3 {
-  font-family: Verdana;
+h2 {
   font-weight: 300;
   font-size: 42px;
-  color: white;
 }
 p {
-  font-family: Verdana;
   font-size: 21px;
   color: gray;
 }
@@ -26,7 +21,10 @@ p {
 a {
   color: Aquamarine;
   font-size: 16px;
-  text-decoration: none;
+}
+
+video {
+  object-position: center;
 }
 
 footer {
