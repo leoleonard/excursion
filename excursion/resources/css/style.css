@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+h1 {
+  font-family: Veranda;
+  font-weight: normal;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  color: Aquamarine;
+  font-size: 16px;
+}
