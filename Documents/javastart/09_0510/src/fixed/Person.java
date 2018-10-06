@@ -1,4 +1,4 @@
-package two;
+package fixed;
 
 public class Person {
     private String firstName;
@@ -37,10 +37,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "firstName='" + firstName + '\'' +
+        return "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", id='" + id + '\'' +
-                '}';
+                ", id='" + id + '\'';
     }
 }

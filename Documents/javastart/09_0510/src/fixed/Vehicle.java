@@ -1,6 +1,6 @@
-package two;
+package fixed;
 
-public abstract class Vehicle implements Moveable {
+public class Vehicle implements Moveable {
     private String name;
     private int year;
     private String direction;
@@ -9,6 +9,8 @@ public abstract class Vehicle implements Moveable {
         this.name = name;
         this.year = year;
     }
+
+    //okreslenie domyslnego konstruktora, wylaczenie pola 'direction'
 
     public String getName() {
         return name;
@@ -34,24 +36,23 @@ public abstract class Vehicle implements Moveable {
         this.direction = direction;
     }
 
-    //musza byc zaimplementowane wszystkie metody aby klasy korzystajace z Vehicle nie byly abstrakcyjne
-
     @Override
     public void turnLeft() {
-        this.direction = "left";
-    }
-
-    @Override
-    public void goForward() {
-        setDirection("Na przód");
-    }
-    @Override
-    public void goBack() {
-        setDirection("Do tyłu");
+        this.direction = "Left";
     }
 
     @Override
     public void turnRight() {
-        setDirection("W prawo");
+        this.direction = "Right";
+    }
+
+    @Override
+    public void goFordward() {
+        this.direction = "Forward";
+    }
+
+    @Override
+    public void goBack() {
+        this.direction = "Back";
     }
 }

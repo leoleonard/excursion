@@ -1,11 +1,13 @@
-package two;
+package fixed;
 
 public class RentableCar extends Car implements Rentable {
-    private Person person;
+   private Person person;
 
-    public RentableCar(String name, int year, int capacity) {
-        super(name, year, capacity);
+    public RentableCar(String name, int year, int seats) {
+        super(name, year, seats);
     }
+
+    // brak Person person w konstruktorze
 
     public Person getPerson() {
         return person;
@@ -16,8 +18,8 @@ public class RentableCar extends Car implements Rentable {
     }
 
     @Override
-    public void rent(String fristName, String lastName, String id) {
-        person = new Person("Jan", "Kowalski", "12345");
+    public boolean isRent() {
+        return person != null;
     }
 
     @Override
@@ -26,8 +28,8 @@ public class RentableCar extends Car implements Rentable {
     }
 
     @Override
-    public boolean isRent() {
-        return person != null;
+    public void rent(String firstName, String lastname, String id) {
+        person = new Person(firstName, lastname, id);
     }
 
     @Override

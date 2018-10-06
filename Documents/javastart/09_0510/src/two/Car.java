@@ -3,8 +3,8 @@ package two;
 public class Car extends Vehicle {
     private int capacity;
 
-    public Car(String name, int year, String direction, int capacity) {
-        super(name, year, direction);
+    public Car(String name, int year, int capacity) {
+        super(name, year);
         this.capacity = capacity;
     }
 

@@ -1,9 +1,9 @@
-package two;
+package fixed;
 
-public class Motorbike extends Vehicle {
+public class MotorBike extends Vehicle{
     private int speedLimit;
 
-    public Motorbike(String name, int year, int speedLimit) {
+    public MotorBike(String name, int year, int speedLimit) {
         super(name, year);
         this.speedLimit = speedLimit;
     }
@@ -15,5 +15,4 @@ public class Motorbike extends Vehicle {
     public void setSpeedLimit(int speedLimit) {
         this.speedLimit = speedLimit;
     }
-
 }
