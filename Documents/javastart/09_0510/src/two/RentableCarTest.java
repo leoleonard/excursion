@@ -10,10 +10,10 @@ public abstract class RentableCarTest {
         cars[0].rent("Jan", "Kowalski", "123456");
         cars[1].rent("Ola", "Skalka", "1234");
 
-        System.out.println(cars[1].getCapacity());
 
-        if(cars[1].isRent()) {
-            System.out.println("Samochód wypożyczony do " + cars[0].getPerson());
+        cars[1].handOver();
+        if(cars[0].isRent()) {
+            System.out.println("Samochód wypożyczony do " + cars[1].getPerson());
         } else {
             System.out.println("Samochód można wypożyczyć");
         }

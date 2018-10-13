@@ -1,6 +1,6 @@
 package fixed;
 
-public class Vehicle implements Moveable {
+public abstract class Vehicle implements Moveable {
     private String name;
     private int year;
     private String direction;
