@@ -38,11 +38,7 @@ public class Computer implements Comparable<Computer> {
 
     @Override
     public String toString() {
-        return "Computer{" +
-                "name='" + name + '\'' +
-                ", cpuMhz=" + cpuMhz +
-                ", ram=" + ram +
-                "}\n";
+        return "Computer{" + "name='" + name + '\'' + ", cpuMhz=" + cpuMhz + ", ram=" + ram + "}" + "\n";
     }
 
 
@@ -55,7 +51,7 @@ public class Computer implements Comparable<Computer> {
             if (this.ram > o.ram) {
                 return 1;
             } else if (this.ram == o.ram) {
-                return this.name.compareTo(o.name)
+                return this.name.compareTo(o.name);
                 } else {
                 return -1;
             }
