@@ -1,9 +1,6 @@
 package one;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -18,13 +15,26 @@ public class Worksheet {
         LocalDateTime localDateTime = LocalDateTime.parse(userInput, dateTimeFormatter);
         System.out.println(localDateTime);
 
-        System.out.println("Ile pracowałeś godzin?");
+        System.out.println("Kiedy skończyłeś?");
         String workDuration = scanner.nextLine();
+
 
         LocalDateTime localDateTime2 = LocalDateTime.parse(workDuration, dateTimeFormatter);
         Duration duration = Duration.between(localDateTime, localDateTime2);
-        duration.toHours();
-        System.out.println(duration);
+        long hours = duration.toHours();
+        System.out.println("Przepracowałeś: ");
+        System.out.println(hours + " godzin");
+
+        ZoneId zone = java.time.ZoneId.of("CET");
+        ZonedDateTime start = ZonedDateTime.of(2018, 05, 15, 14, 0, 0, 0, zone);
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(localDateTime2, zone);
+        System.out.println(zonedDateTime);
+
+//        ZonedDateTime zonedDateFrom = ZonedDateTime.of(2018, 10, 28, 59, 0, 0, 0, zone);
+//        System.out.println(zonedDateFrom);
+
+
+
     }
 
 }
