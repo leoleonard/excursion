@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="user: ${userList}"
+        th:text="|${user.firstName} ${user.lastName}|">
+        Jan Kowalski
+    </li>
+    <li>Edyta Kowalska</li>
+</ul>
+</body>
+</html>
