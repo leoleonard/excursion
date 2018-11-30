@@ -28,15 +28,15 @@ public class SQLInjection {
         int updatedRows = statement.executeUpdate();
         System.out.println("Zaktualizowane rekordy: " + updatedRows);
 
-        String selectQuery = "select * from city where Name=?";
-        PreparedStatement selectStatement = connection.prepareStatement(selectQuery);
-        selectStatement.setString(1, city);
-        ResultSet resultSet = selectStatement.executeQuery();
-        while (ResultSet.next()) {
-            String name = resultSet.getString("Name");
-            int pop = resultSet.getInt("Population");
-            System.out.println(name + " " + pop);
-        }
+//        String selectQuery = "select * from city where Name=?";
+//        PreparedStatement selectStatement = connection.prepareStatement(selectQuery);
+//        selectStatement.setString(1, city);
+//        ResultSet resultSet = selectStatement.executeQuery();
+//        while (ResultSet.next()) {
+//            String name = resultSet.getString("Name");
+//            int pop = resultSet.getInt("Population");
+//            System.out.println(name + " " + pop);
+//        }
         
         connection.close();
     }
